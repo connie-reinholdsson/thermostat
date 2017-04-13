@@ -20,7 +20,22 @@
     <button type="button" id="powersaving-off">PSM Off</button>
     <p id='usage'></p>
   </p>
+
+<section>
+  Temperature: <p id="weather"> C</p>
+  <form id="select-city">
+    <input id="current-city" type="text" placeholer="Enter a city"></input>
+    <input type="submit"></input>
+  </form>
+</section>
+
+
+
+
   </section>
+
+
+
 
   <script>
   $(document).ready(function() {
@@ -68,6 +83,19 @@
         $('#PSM').text(thermostat.powerSaverOn);
       });
       $('#usage').text(thermostat.powerUsage());
+
+
+      $('#select-city').submit(function(event) {
+        event.preventDefault();
+        var city = $('#current-city').val();
+        $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
+          $('#weather').text(data.main.temp);
+        })
+      })
+
+
+
+
   });
 
   </script>
