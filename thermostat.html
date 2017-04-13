@@ -18,37 +18,58 @@
     <p id="PSM"></p>
     <button type="button" id="powersaving-on">PSM On</button>
     <button type="button" id="powersaving-off">PSM Off</button>
+    <p id='usage'></p>
   </p>
   </section>
 
   <script>
   $(document).ready(function() {
     var thermostat = new Thermostat();
-    $('#temperature').text(thermostat.temperature);
+    updateTemperature();
+
+    function updateTemperature(){
+        $('#temperature').text(thermostat.temperature);
+        if (thermostat.powerUsage() === "Low usage") {
+          $('#temperature').css('color', 'green')
+        } else if (thermostat.powerUsage() === "Medium usage") {
+          $('#temperature').css('color', 'orange')
+        } else if (thermostat.powerUsage() === "High usage") {
+          $('#temperature').css('color', 'red')
+      }
+    }
+
     $('#temperature-up').click(function() {
       thermostat.increase();
-      $('#temperature').text(thermostat.temperature);
+      updateTemperature();
+      $('#usage').text(thermostat.powerUsage());
     });
+
       $('#temperature-down').click(function() {
         thermostat.decrease();
-        $('#temperature').text(thermostat.temperature);
+        updateTemperature();
+        $('#usage').text(thermostat.powerUsage());
       });
+
       $('#temperature-reset').click(function() {
         thermostat.reset();
-        $('#temperature').text(thermostat.temperature);
+        updateTemperature();
+        $('#usage').text(thermostat.powerUsage());
       });
 
       $('#PSM').text(thermostat.powerSaverOn);
       $('#powersaving-on').click(function() {
         thermostat.powerSaveSwitchOn();
         $('#PSM').text(thermostat.powerSaverOn);
+        updateTemperature();
       });
+
       $('#powersaving-off').click(function() {
         thermostat.powerSaveSwitchOff();
         $('#PSM').text(thermostat.powerSaverOn);
       });
+      $('#usage').text(thermostat.powerUsage());
   });
-  </script>
 
+  </script>
   </body>
 </html>

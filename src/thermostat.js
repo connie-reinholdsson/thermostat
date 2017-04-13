@@ -29,7 +29,12 @@ Thermostat.prototype.powerSaveSwitchOff = function() {
 }
 
 Thermostat.prototype.powerSaveSwitchOn = function() {
-  this.powerSaverOn = "On";
+  if(this.temperature >= 25) {
+    this.temperature = 25;
+    this.powerSaverOn = "On";
+  } else {
+    this.powerSaverOn = "On";
+  }
 }
 
 
