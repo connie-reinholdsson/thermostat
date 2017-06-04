@@ -9,11 +9,12 @@ This thermostat is thermostat on the web with a dog theme which will help you re
 - Jasmine
 
 ### Key features:
-- Minimum degrees of 10
-- If the number is divisible by 3 the program will return "Fizz"
-- If the number is divisible by 5 the program will return "Buzz"
-- If the number is divisible by 3 and 5 the program will return "Fizzbuzz"
-- If it's not divisible by any of those numbers, it will simply return the number.
+- Minimum temperature of 10 degrees
+- Maximum temperature of 25 degrees when Power Saving Mode is On
+- Maximum temperature of 32 degrees when Power Saving Mode is Off
+- Increase / decrease the temperature
+- Turn Power Saving Mode On / Off
+- Dog GIFs will change depending on the temperature
 
 ### Deployment instructions:
 1. Navigate to your projects directory
