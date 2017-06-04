@@ -1,15 +1,15 @@
-# FizzBuzz
+# Thermostat
 
-### Welcome to FizzBuzz!
+### Welcome to Dog Thermostat!
 
-This is a FizzBuzz game which can be played in the JavaScript console.
+This thermostat is thermostat on the web with a dog theme which will help you regulate the temperature! Features include increasing / decreasing the temperature, turning the Power Save Mode on and off, minimum temperature of 10 degrees and a maximum temperature of 25 / 32 degrees (depending on whether Power Save Mode is on or off).
 
 ### Technologies:
 - JavaScript
 - Jasmine
 
 ### Key features:
-- User chooses a number
+- Minimum degrees of 10
 - If the number is divisible by 3 the program will return "Fizz"
 - If the number is divisible by 5 the program will return "Buzz"
 - If the number is divisible by 3 and 5 the program will return "Fizzbuzz"
