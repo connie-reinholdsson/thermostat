@@ -1,4 +1,4 @@
-# Thermostat
+# Web Thermostat
 
 ### Welcome to Dog Thermostat!
 
