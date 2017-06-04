@@ -18,10 +18,9 @@ This thermostat is thermostat on the web with a dog theme which will help you re
 
 ### Deployment instructions:
 1. Navigate to your projects directory
-2. Run ```git clone https://github.com/connie-reinholdsson/fizzbuzz_js.git```
-3. Run ```cd fizzbuzz_js```
-4. Run the URL in the browser ```/Users/conniereinholdsson/Desktop/New_Projects/fizzbuzz_js/SpecRunner.html```
-5. Use 'Cmd + Opt + J' to open the JavaScript Console.
-6. Run ```fizzbuzz.play(number)```
+2. Run ```git clone https://github.com/connie-reinholdsson/thermostat.git```
+3. Run ```cd thermostat```
+4. Run the URL in the browser ```/Users/conniereinholdsson/Desktop/New_Projects/thermostat/thermostat.html``` (Please note: You must update to your project path!)
+5. Click the buttons to explore! 
 
 Enjoy!
